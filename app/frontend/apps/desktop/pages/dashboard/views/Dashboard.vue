@@ -107,30 +107,6 @@ const tableItems = reactive([
     role: 'Member',
   },
 ])
-
-const tableActions: MenuItem[] = [
-  {
-    key: 'delete',
-    label: 'Delete this row',
-    icon: 'trash3',
-    show: (data) => !!data?.role,
-    onClick: (data) => {
-      console.log(data)
-    },
-  },
-  {
-    key: 'download',
-    label: 'Download this row',
-    icon: 'download',
-    onClick: (data) => {
-      console.log(data)
-    },
-  },
-]
-
-const changeRowSimple = () => {
-  tableItems[0].role = tableItems[0].role ? '' : 'Member'
-}
 </script>
 
 <template>
@@ -140,14 +116,10 @@ const changeRowSimple = () => {
     <!-- TODO: content -->
     <h2 class="mt-8 mb-2">Table (Simple)</h2>
     <div class="mb-6 flex flex-col gap-4">
-      <CommonButton variant="primary" @click="changeRowSimple()"
-        >Change row</CommonButton
-      >
       <CommonSimpleTable
         caption="test"
         :headers="tableHeaders"
         :items="tableItems"
-        :actions="tableActions"
       ></CommonSimpleTable>
     </div>
   </LayoutMain>
