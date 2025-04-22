@@ -6,6 +6,7 @@ import { reactive } from 'vue'
 import { useSessionStore } from '#shared/stores/session.ts'
 
 import CommonSimpleTable from '#desktop/components/CommonTable/CommonSimpleTable.vue'
+import LayoutMain from '#desktop/components/layout/LayoutMain.vue'
 
 const session = useSessionStore()
 
