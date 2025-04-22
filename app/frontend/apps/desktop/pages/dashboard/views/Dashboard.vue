@@ -115,7 +115,7 @@ const tableItems = reactive([
     Hello, {{ session.user?.fullname }}!
 
     <!-- TODO: content -->
-    <h2 class="mt-8 mb-2">Table (Simple)</h2>
+    <h2 class="mt-8 mb-2">All tickets created by today</h2>
     <div class="mb-6 flex flex-col gap-4">
       <CommonSimpleTable
         caption="test"
